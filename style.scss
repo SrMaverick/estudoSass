@@ -1,0 +1,87 @@
+//Variaveis com sass
+$navy-blue: #23238E;
+$dark-blue: #202124;
+$slate-blue: #007FFF;
+$neon-blue: #4D4DFF;
+$dark-slate-grey: #2F4F4F;
+
+@mixin fonte{
+    //Permiti criar uma "variavel", armazenando o estilo para ser utilizado mais de uma vez.
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+}
+
+section{
+    width: 25em;
+    height: 12em;
+    text-align: center;
+    padding: 1em;
+}
+
+.primeira{
+    background-color: $navy-blue;
+    border-radius: 1em;
+}
+
+.segunda{
+    background-color: $slate-blue;
+    border-radius: 1em;
+}
+
+.terceira{
+    background-color: $neon-blue;
+    border-radius: 1em;
+}
+
+h2{
+    color: white;
+    margin-bottom: 1em;
+    font-size: 20px;
+    @include fonte()
+}
+
+p{
+    color: white;
+    text-align: justify;
+}
+
+button{
+    margin-top: 1em;
+    background-color: $dark-slate-grey;
+    color: white;
+    width: 8rem;
+    height: 2em;
+    border-radius: 1em;
+    cursor: pointer;
+    @include fonte()
+}
+
+@media (max-width: 500px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space space-around;
+        padding: 5em;
+        height: 52em;
+     }
+     
+     section{
+        width: 22em;
+        height: 13em;
+        text-align: center;
+        padding: 1em;
+    }
+}    
